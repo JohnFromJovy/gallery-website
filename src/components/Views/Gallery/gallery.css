@@ -1,0 +1,27 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.loadMore button {
+  border-radius: 5%;
+  border: 0;
+  padding: 0.2rem;
+  background-color: rgb(66, 187, 202);
+  color: white;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}/*# sourceMappingURL=gallery.css.map */

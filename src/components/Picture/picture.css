@@ -1,0 +1,10 @@
+.picture {
+  padding: 1rem;
+  width: 400px;
+}
+.picture .imageContainer {
+  height: 30rem;
+}
+.picture .imageContainer img {
+  height: 100%;
+}/*# sourceMappingURL=picture.css.map */

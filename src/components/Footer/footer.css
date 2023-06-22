@@ -1,0 +1,9 @@
+.footer {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(70, 70, 70);
+  color: white;
+}/*# sourceMappingURL=footer.css.map */

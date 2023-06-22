@@ -1,0 +1,15 @@
+nav {
+  background-color: rgb(141, 219, 216);
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+nav ul li {
+  padding: 1rem;
+}
+nav ul li a {
+  font-size: 1rem;
+  color: white;
+}/*# sourceMappingURL=nav.css.map */
