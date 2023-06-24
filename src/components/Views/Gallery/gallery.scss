@@ -11,3 +11,18 @@
   align-items: center;
   padding: 2rem;
 }
+
+.loadMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  button {
+    border-radius: 5%;
+    border: 0;
+    padding: 0.2rem;
+    background-color: rgb(66, 187, 202);
+    color: white;
+  }
+}
