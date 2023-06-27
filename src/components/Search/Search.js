@@ -1,7 +1,7 @@
 import React from "react";
 import "./search.css";
 
-function Search({ search, setInput }) {
+function Search({ setInput, search }) {
   const inputHandler = (e) => {
     setInput(e.target.value);
   };
@@ -17,5 +17,4 @@ function Search({ search, setInput }) {
     </div>
   );
 }
-
 export default Search;

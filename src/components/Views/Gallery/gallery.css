@@ -5,6 +5,14 @@
   align-items: center;
 }
 
+.loading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
 .loadMore {
   display: flex;
   justify-content: center;
@@ -17,11 +25,4 @@
   padding: 0.2rem;
   background-color: rgb(66, 187, 202);
   color: white;
-}
-
-.spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
 }/*# sourceMappingURL=gallery.css.map */

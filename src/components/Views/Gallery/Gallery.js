@@ -4,104 +4,114 @@ import "./gallery.css";
 import Picture from "../../Picture/Picture";
 import Search from "../../Search/Search";
 
+const fetchData = async (client, query, page) => {
+  const perPage = 16;
+  if (query === "") {
+    try {
+      const result = await client.photos.curated({
+        page: page,
+        per_page: perPage,
+      });
+      return result;
+      // result.photos.map((e) => {
+      //   console.log(e);
+      // });
+    } catch (e) {
+      console.log("fetch error out", e);
+    }
+  } else {
+    try {
+      const result = await client.photos.search({
+        query,
+        page,
+        per_page: perPage,
+      });
+      return result;
+    } catch (e) {
+      console.log("search error out", e);
+    }
+  }
+};
+
+/* const searchData = async (client, query, page) => {
+  try {
+    const result = await client.photos.search({
+      query,
+      page,
+      per_page: 15,
+    });
+    return result;
+  } catch (e) {
+    console.log("search error out", e);
+  }
+}; */
+
 function Gallery() {
   const [data, setData] = useState(null);
-  const [input, setInput] = useState([]);
+  const [input, setInput] = useState("");
   const [currentSearch, setCurrentSearch] = useState("");
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(1);
   const client = createClient(
     "tP6ce7LPIrr9FcVbNMPrWLyGxlhxdD8h4Sdmxk5YK8OXHFRGUE2tLFRF"
   );
 
-  const loadingSpinner = () => {
+  const loading = () => {
     return <div className="spinner">Loading</div>;
   };
 
-  const fetchData = async (page) => {
-    try {
-      const result = await client.photos.curated({ page: page, per_page: 15 });
+  //when page load up or search button clicked
+  useEffect(
+    () => async () => {
+      const result = await fetchData(client, currentSearch, page);
       setData(result.photos);
-      result.photos.map((e) => {
-        console.log(e);
-      });
-    } catch (e) {
-      console.log("fetch error out", e);
-    }
-  };
-
-  const searchData = async (query) => {
-    try {
-      const result = await client.photos.search({
-        query,
-        per_page: 15,
-      });
-      setData(result.photos);
-    } catch (e) {
-      console.log("search error out", e);
-    }
-  };
-
-  //when page load up
-  useEffect(() => {
-    fetchData(page);
-  }, []);
+      setPage(page + 1);
+    },
+    [currentSearch]
+  );
+  /* 
+  //problem here!! always render current search on next search content confirmed/ button clicked.
 
   //when search button clicked
-  useEffect(() => {
-    if (currentSearch === "") {
-      fetchData();
-    } else {
-      searchData(currentSearch, page);
-    }
-  }, [currentSearch]);
+  useEffect(
+    () => async () => {
+      console.log("current search is " + currentSearch);
+      if (currentSearch === "") {
+        const result = await fetchData(client, page);
+        setData(result.photos);
+      } else {
+        const result = await searchData(client, currentSearch, page);
+        setData(result.photos);
+      }
+    },
+    [currentSearch]
+  ); */
 
   //when load more button clicked
   const loadMore = async () => {
     console.log("load more button clicked");
     setPage(page + 1);
     console.log("page number is " + page);
-    if (currentSearch === "") {
-      console.log("input is empty");
-      try {
-        const result = await client.photos.curated({
-          page: page,
-          per_page: 15,
-        });
-        setData(data.concat(result.photos));
-        result.photos.map((e) => {
-          console.log(e);
-        });
-      } catch (e) {
-        console.log("load more pictures error out", e);
-      }
-    } else {
-      console.log(
-        `search more photos because we have search input, which is ${currentSearch}`
-      );
-      try {
-        const result = await client.photos.search({
-          query: currentSearch,
-          page: page,
-          per_page: 15,
-        });
-        setData(data.concat(result.photos));
-      } catch (e) {
-        console.log("load more search error out", e);
-      }
+    try {
+      const result = await fetchData(client, currentSearch, page);
+      setData(data.concat(result.photos));
+    } catch (e) {
+      console.log("load more search error out", e);
     }
   };
 
   //how to add spinner when loading more pages?
   if (!data) {
-    return <div className="spinner">Loading</div>;
+    return <div className="loading">Loading</div>;
   }
   return (
     <>
       <Search
+        setInput={setInput}
         search={() => {
           setCurrentSearch(input);
+          console.log("current input is " + input);
+          fetchData(client, currentSearch, page);
         }}
-        setInput={setInput}
       />
       <div className="gallery">
         {data.map((d) => {
@@ -114,5 +124,4 @@ function Gallery() {
     </>
   );
 }
-
 export default Gallery;
