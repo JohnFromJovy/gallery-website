@@ -1,9 +1,11 @@
+@import "../../../styles/myColor";
+@import "../../../styles/myFont";
+
 .picture {
   width: 300px;
   margin: auto;
   margin-bottom: 2rem;
-  border: 1px solid black;
-  padding: 1rem;
+  border: 1px solid $myBackgroundColor1;
   .imageContainer {
     height: 24rem;
     img {

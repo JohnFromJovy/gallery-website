@@ -1,5 +1,5 @@
 nav {
-  background-color: rgb(141, 219, 216);
+  background-color: #16a085;
 }
 nav ul {
   display: flex;
@@ -11,5 +11,5 @@ nav ul li {
 }
 nav ul li a {
   font-size: 1rem;
-  color: white;
+  color: #ecf0f1;
 }/*# sourceMappingURL=nav.css.map */

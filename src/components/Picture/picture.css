@@ -2,8 +2,7 @@
   width: 300px;
   margin: auto;
   margin-bottom: 2rem;
-  border: 1px solid black;
-  padding: 1rem;
+  border: 1px solid #34495e;
 }
 .picture .imageContainer {
   height: 24rem;

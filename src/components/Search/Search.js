@@ -13,7 +13,7 @@ function Search({ setInput, search }) {
         type="text"
         className="searchInput"
       ></input>
-      <button onClick={search}>SEARCH</button>
+      <button onClick={search}>Search</button>
     </div>
   );
 }

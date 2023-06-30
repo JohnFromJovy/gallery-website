@@ -1,9 +1,11 @@
+@import "../../styles/myColor";
+
 .footer {
   height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  background-color: rgb(70, 70, 70);
-  color: white;
+  background-color: $myBackgroundColor1;
+  color: $myFontColor1;
 }

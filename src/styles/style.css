@@ -5,10 +5,27 @@
 }
 
 a {
+  font-family: "Ysabeau Office", sans-serif;
   text-decoration: none;
-  color: black;
+  color: #ecf0f1;
 }
 
 ul {
+  font-family: "Ysabeau Office", sans-serif;
   list-style-type: none;
+}
+
+button {
+  font-size: 1rem;
+  margin: 0rem 0.5rem;
+  font-family: "Ysabeau Office", sans-serif;
+  color: #ecf0f1;
+}
+
+p,
+h1,
+h2,
+h3,
+div {
+  font-family: "Ysabeau Office", sans-serif;
 }/*# sourceMappingURL=style.css.map */

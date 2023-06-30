@@ -1,5 +1,7 @@
+@import "../../styles/myColor";
+
 nav {
-  background-color: rgb(141, 219, 216);
+  background-color: $myGreen2;
   ul {
     display: flex;
     justify-content: flex-end;
@@ -8,7 +10,7 @@ nav {
       padding: 1rem;
       a {
         font-size: 1rem;
-        color: white;
+        color: $myFontColor1;
       }
     }
   }
