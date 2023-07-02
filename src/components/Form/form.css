@@ -1,0 +1,29 @@
+form {
+  margin-top: 2rem;
+}
+form label {
+  text-align: center;
+}
+form label input {
+  margin: auto;
+  display: block;
+  width: 25rem;
+  color: #1a2a3a;
+}
+form label .inputMessage {
+  display: block;
+  margin: 0 auto;
+  width: 25rem;
+  text-align: start;
+  height: 5rem;
+  color: #1a2a3a;
+}
+form button {
+  cursor: pointer;
+  border: 0;
+  padding: 0.2rem;
+  display: block;
+  margin: 0 auto 2rem auto;
+  background-color: #1abc9c;
+  color: #ecf0f1;
+}/*# sourceMappingURL=form.css.map */

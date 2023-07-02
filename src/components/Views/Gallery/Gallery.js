@@ -33,24 +33,12 @@ const fetchData = async (client, query, page) => {
   }
 };
 
-/* const searchData = async (client, query, page) => {
-  try {
-    const result = await client.photos.search({
-      query,
-      page,
-      per_page: 15,
-    });
-    return result;
-  } catch (e) {
-    console.log("search error out", e);
-  }
-}; */
-
 function Gallery() {
   const [data, setData] = useState(null);
-  const [input, setInput] = useState("");
   const [currentSearch, setCurrentSearch] = useState("");
   const [page, setPage] = useState(1);
+  const [input, setInput] = useState("");
+
   const client = createClient(
     "tP6ce7LPIrr9FcVbNMPrWLyGxlhxdD8h4Sdmxk5YK8OXHFRGUE2tLFRF"
   );
@@ -99,18 +87,18 @@ function Gallery() {
     }
   };
 
-  //how to add spinner when loading more pages?
+  //how to add spinner when loading more pages???
   if (!data) {
     return <div className="loading">Loading</div>;
   }
   return (
     <>
+      {/* Opt 1 */}
+      {/* <Search setCurrentSearch={setCurrentSearch} /> */}
       <Search
         setInput={setInput}
         search={() => {
           setCurrentSearch(input);
-          console.log("current input is " + input);
-          fetchData(client, currentSearch, page);
         }}
       />
       <div className="gallery">

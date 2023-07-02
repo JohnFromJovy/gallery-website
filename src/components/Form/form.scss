@@ -1,0 +1,33 @@
+@import "../../styles/myColor";
+@import "../../styles/myFont";
+
+form {
+  margin-top: 2rem;
+  label {
+    text-align: center;
+    input {
+      margin: auto;
+      display: block;
+      width: 25rem;
+      color: $myFontColor3;
+    }
+
+    .inputMessage {
+      display: block;
+      margin: 0 auto;
+      width: 25rem;
+      text-align: start;
+      height: 5rem;
+      color: $myFontColor3;
+    }
+  }
+  button {
+    cursor: pointer;
+    border: 0;
+    padding: 0.2rem;
+    display: block;
+    margin: 0 auto 2rem auto;
+    background-color: $myGreen1;
+    color: $myFontColor1;
+  }
+}

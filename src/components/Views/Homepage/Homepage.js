@@ -1,7 +1,10 @@
 import React from "react";
 import "./homepage.css";
+
 import { useState, useEffect } from "react";
 import pic1 from "../../../images/20220713-0019cs.jpg";
+import { Link, Routes, Route, useNavigate } from "react-router-dom";
+
 //import { createClient } from "pexels";
 
 //stop for a while
@@ -22,42 +25,51 @@ const Homepage = () => {
   const [text, setText] = useState("");
   const textState = ["isTyping", "isDeleting"];
   const [typing, setTyping] = useState(textState[0]);
+  const navigate = useNavigate();
+
+  //when click Hire Me button, jump to contact page
+  const buttonHandler = (url) => {
+    console.log();
+    navigate(url, { replace: true });
+  };
 
   useEffect(() => {
-    console.log("typing: " + typing);
-    console.log("text.length: " + text.length);
     const timeout = setTimeout(() => {
+      //page load up
       if (
         text !== initialText &&
         typing === "isTyping" &&
         jobState === "working"
       ) {
-        console.log("1");
+        // console.log("1");
         setText(initialText.slice(0, text.length + 1));
         return;
       }
+      //when initialText is all displayed, stop for 1.5s, then prepare to deleting
       if (text === initialText && typing === "isTyping") {
-        console.log("2");
+        // console.log("2");
         sleep(1500).then(() => {
           setTyping(textState[1]);
           return;
         });
-        console.log("text.length: " + text.length);
         return;
       }
+      //deleting 'photographer'
       if (text.length > 7 && typing === "isDeleting") {
-        console.log(3);
+        // console.log(3);
         setText(initialText.slice(0, text.length - 1));
         return;
       }
+      //when 'photographer' been deleted, prepare to typing
       if (text.length === 7 && typing === "isDeleting") {
-        console.log(4);
+        // console.log(4);
         setTyping(textState[0]);
         setJobState(job[1]);
         return;
       }
+      //typing 'softare engineer'
       if (text !== finalText && typing === "isTyping") {
-        console.log(5);
+        // console.log(5);
         setText(finalText.slice(0, text.length + 1));
       }
     }, randomTime());
@@ -71,8 +83,8 @@ const Homepage = () => {
           <h1 className="greetings">Hello there...</h1>
           <h1 className="introduce">My name Li Jiang</h1>
           <div className=" text">{text}</div>
-          <button>MY WORK</button>
-          <button>HIRE ME</button>
+          <button onClick={() => navigate("/gallery")}>MY WORK</button>
+          <button onClick={() => navigate("/contact")}>HIRE ME</button>
         </section>
         <section className="right">
           <div className="imageContainer"></div>

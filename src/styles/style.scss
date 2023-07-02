@@ -4,30 +4,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $myFont;
 }
 
 a {
-  font-family: $myFont;
   text-decoration: none;
   color: $myFontColor1;
 }
 
 ul {
-  font-family: $myFont;
   list-style-type: none;
 }
 
 button {
   font-size: 1rem;
   margin: 0rem 0.5rem;
-  font-family: $myFont;
   color: $myFontColor1;
-}
-
-p,
-h1,
-h2,
-h3,
-div {
-  font-family: $myFont;
 }

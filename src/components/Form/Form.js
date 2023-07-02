@@ -1,4 +1,5 @@
 import React from "react";
+import "./form.css";
 
 const Form = () => {
   function handleSubmit(e) {
@@ -20,8 +21,37 @@ const Form = () => {
   return (
     <form method="post" onSubmit={handleSubmit}>
       <label>
-        Text input: <input name="myInput" defaultValue="Some initial value" />
+        <input
+          className="inputName"
+          name="inputName"
+          placeholder="Please write you name here"
+        />
       </label>
+      <br />
+      <label>
+        <input
+          className="inputEmail"
+          name="inputEmail"
+          placeholder="And your Email address"
+        />
+      </label>
+      <br />
+      <label>
+        <input
+          className="inputMobile"
+          name="inputMobile"
+          placeholder="Your mobile number"
+        />
+      </label>
+      <br />
+      <label>
+        <textarea
+          className="inputMessage"
+          name="inputMessage"
+          placeholder="Your message"
+        />
+      </label>
+      <br />
       <button type="submit">Submit form</button>
     </form>
   );
