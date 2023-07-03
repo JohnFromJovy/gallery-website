@@ -6,6 +6,7 @@ import Search from "../../Search/Search";
 
 const fetchData = async (client, query, page) => {
   const perPage = 16;
+  console.log(query);
   if (query === "") {
     try {
       const result = await client.photos.curated({
@@ -37,7 +38,6 @@ function Gallery() {
   const [data, setData] = useState(null);
   const [currentSearch, setCurrentSearch] = useState("");
   const [page, setPage] = useState(1);
-  const [input, setInput] = useState("");
 
   const client = createClient(
     "tP6ce7LPIrr9FcVbNMPrWLyGxlhxdD8h4Sdmxk5YK8OXHFRGUE2tLFRF"
@@ -95,12 +95,7 @@ function Gallery() {
     <>
       {/* Opt 1 */}
       {/* <Search setCurrentSearch={setCurrentSearch} /> */}
-      <Search
-        setInput={setInput}
-        search={() => {
-          setCurrentSearch(input);
-        }}
-      />
+      <Search onSearch={setCurrentSearch} />
       <div className="gallery">
         {data.map((d) => {
           return <Picture data={d} />;

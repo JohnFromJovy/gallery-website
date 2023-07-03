@@ -30,15 +30,27 @@ import "./search.css";
 //   </form>
 
 //Opt 2: write my own;
-const Search = ({ setInput, search }) => {
+const Search = ({ onSearch }) => {
+  const [input, setInput] = useState("");
+
   const inputHandler = (e) => {
     setInput(e.target.value);
   };
 
+  const onButtonClick = async () => {
+    console.log(input);
+    await onSearch(input);
+  };
+
   return (
     <div className="search">
-      <input className="input" onChange={inputHandler} type="text" />
-      <button onClick={search}>Search</button>
+      <input
+        className="input"
+        value={input}
+        onChange={inputHandler}
+        type="text"
+      />
+      <button onClick={onButtonClick}>Search</button>
     </div>
   );
 };

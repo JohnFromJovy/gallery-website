@@ -1,12 +1,10 @@
-import React from "react";
-import "./about.css";
-// import "../../Sidebar/Sidebar";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import React from "react";
 
-const About = () => {
+const Sidebar = () => {
   return (
     <div>
-      <Sidebar defaultCollapsed={true} backgroundColor="#cccccc">
+      <Sidebar>
         <Menu>
           <SubMenu label="Charts">
             <MenuItem> Pie charts </MenuItem>
@@ -20,4 +18,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Sidebar;
