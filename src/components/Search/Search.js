@@ -38,7 +38,7 @@ const Search = ({ onSearch }) => {
   };
 
   const onButtonClick = async () => {
-    console.log(input);
+    console.log("go onButtonClick. input = " + input);
     await onSearch(input);
   };
 
