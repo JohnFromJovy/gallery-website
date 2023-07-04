@@ -5,6 +5,7 @@ import Homepage from "./components/Views/Homepage/Homepage";
 import About from "./components/Views/About/About";
 import Gallery from "./components/Views/Gallery/Gallery";
 import Contact from "./components/Views/Contact/Contact";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 import Footer from "./components/Footer/Footer";
 import "./styles/style.css";
@@ -12,15 +13,25 @@ import "./styles/style.css";
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Routes>
-        <Route index element={<Homepage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
+      <Sidebar>
+        <Routes>
+          <Route index element={<Homepage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Sidebar>
     </div>
+
+    //   <Nav />
+    //   <Routes>
+    //     <Route index element={<Homepage />} />
+    //     <Route path="/about" element={<About />} />
+    //     <Route path="/gallery" element={<Gallery />} />
+    //     <Route path="/contact" element={<Contact />} />
+    //   </Routes>
+    //   <Footer />
+    // </div>
   );
 }
 

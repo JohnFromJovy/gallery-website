@@ -1,0 +1,55 @@
+.sidebarContainer {
+  display: flex;
+}
+
+.sidebar {
+  background-color: #16a085;
+  color: #ecf0f1;
+  height: 100vh;
+  width: 250px;
+  transition: all 0.3s;
+}
+
+.topSection {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.logo {
+  text-align: left;
+  font-family: "Ysabeau Office", sans-serif;
+}
+
+.bars {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 50px;
+  font-size: 25px;
+}
+
+.link {
+  display: flex;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+
+.link:hover {
+  background-color: #cccccc;
+  color: #1a2a3a;
+  transition: all 0.5s;
+}
+
+.active {
+  background-color: #1abc9c;
+}
+
+.icon,
+.link {
+  font-size: 20px;
+}
+
+main {
+  width: 100%;
+}/*# sourceMappingURL=sidebar.css.map */
