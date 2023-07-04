@@ -1,9 +1,10 @@
-@import "../../../styles/myColor";
-@import "../../../styles/myFont";
+@import "../../styles/myColor";
+@import "../../styles/myFont";
 
 .picture {
   width: 300px;
   margin: auto;
+  padding: 1rem;
   margin-bottom: 2rem;
   border: 1px solid $myBackgroundColor1;
   .imageContainer {
