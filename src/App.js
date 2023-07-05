@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Nav from "./components/Nav/Nav";
+//import Nav from "./components/Nav/Nav";
 import Homepage from "./components/Views/Homepage/Homepage";
 import About from "./components/Views/About/About";
 import Gallery from "./components/Views/Gallery/Gallery";
@@ -21,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Sidebar>
+      <Footer />
     </div>
 
     //   <Nav />

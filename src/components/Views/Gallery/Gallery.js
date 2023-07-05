@@ -13,9 +13,9 @@ function Gallery() {
     return 1;
   };
 
-  const loading = () => {
-    return <div className="spinner">Loading</div>;
-  };
+  // const loading = () => {
+  //   return <div className="spinner">Loading</div>;
+  // };
 
   const dataUpdate = async (query) => {
     setCurrentSearch(query);

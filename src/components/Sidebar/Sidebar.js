@@ -1,6 +1,6 @@
-import React, { Children } from "react";
+import React from "react";
 import { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   FaHome,
   FaRegLaugh,
@@ -81,6 +81,7 @@ const Sidebar = ({ children }) => {
           <a
             href={item.url}
             target="_blank"
+            rel="noopener noreferrer"
             alt={item.name}
             className="linkIcon"
           >

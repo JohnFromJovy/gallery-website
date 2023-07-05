@@ -3,9 +3,7 @@ import "./homepage.css";
 
 import { useState, useEffect } from "react";
 import pic1 from "../../../images/20220713-0019cs.jpg";
-import { Link, Routes, Route, useNavigate } from "react-router-dom";
-
-//import { createClient } from "pexels";
+import { useNavigate } from "react-router-dom";
 
 //stop for a while
 const sleep = (ms) => {
@@ -29,7 +27,6 @@ const Homepage = () => {
 
   //when click Hire Me button, jump to contact page
   const buttonHandler = (url) => {
-    console.log();
     navigate(url, { replace: true });
   };
 
@@ -83,8 +80,8 @@ const Homepage = () => {
           <h1 className="greetings">Hello there...</h1>
           <h1 className="introduce">My name Li Jiang</h1>
           <div className=" text">{text}</div>
-          <button onClick={() => navigate("/gallery")}>MY WORK</button>
-          <button onClick={() => navigate("/contact")}>HIRE ME</button>
+          <button onClick={() => buttonHandler("/gallery")}>MY WORK</button>
+          <button onClick={() => buttonHandler("/contact")}>HIRE ME</button>
         </section>
         <section className="right">
           <div className="imageContainer"></div>
