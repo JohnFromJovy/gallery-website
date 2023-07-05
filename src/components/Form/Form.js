@@ -20,7 +20,7 @@ const Form = () => {
 
   return (
     <form
-      action="https://formsubmit.co/jiangli@gmail.com"
+      action="https://formsubmit.co/jiangli82@gmail.com"
       method="post"
       onSubmit={handleSubmit}
     >
