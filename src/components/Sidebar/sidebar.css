@@ -3,7 +3,7 @@
 }
 
 .sidebar {
-  background-color: #16a085;
+  background-color: #11846d;
   color: #ecf0f1;
   height: 100vh;
   width: 250px;
@@ -42,12 +42,24 @@
 }
 
 .active {
-  background-color: #1abc9c;
+  background-color: #16a085;
 }
 
 .icon,
 .link {
   font-size: 20px;
+}
+
+.linkSection {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+.linkIcon {
+  padding: 10px;
 }
 
 main {

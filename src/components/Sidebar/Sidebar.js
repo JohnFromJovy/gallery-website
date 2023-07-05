@@ -7,6 +7,8 @@ import {
   FaRegImage,
   FaComment,
   FaBars,
+  FaGithub,
+  FaInstagram,
 } from "react-icons/fa";
 
 import "./sidebar.css";
@@ -23,6 +25,19 @@ const Sidebar = ({ children }) => {
     { path: "/about", name: "About", icon: <FaRegLaugh /> },
     { path: "/gallery", name: "Gallery", icon: <FaRegImage /> },
     { path: "/contact", name: "Contact", icon: <FaComment /> },
+  ];
+
+  const socialMediaItem = [
+    {
+      url: "https://github.com/JohnFromJovy",
+      name: "Github",
+      icon: <FaGithub />,
+    },
+    {
+      url: "https://www.instagram.com/jovy_studio/",
+      name: "Instagram",
+      icon: <FaInstagram />,
+    },
   ];
 
   return (
@@ -61,7 +76,19 @@ const Sidebar = ({ children }) => {
             </div>
           </NavLink>
         ))}
+        <div className="linkSection"></div>
+        {socialMediaItem.map((item, index) => (
+          <a
+            href={item.url}
+            target="_blank"
+            alt={item.name}
+            className="linkIcon"
+          >
+            {item.icon}
+          </a>
+        ))}
       </div>
+
       <main>{children}</main>
     </div>
   );

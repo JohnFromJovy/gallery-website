@@ -19,7 +19,11 @@ const Form = () => {
   }
 
   return (
-    <form method="post" onSubmit={handleSubmit}>
+    <form
+      action="https://formsubmit.co/jiangli@gmail.com"
+      method="post"
+      onSubmit={handleSubmit}
+    >
       <label>
         <input
           className="inputName"
