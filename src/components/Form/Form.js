@@ -2,27 +2,27 @@ import React from "react";
 import "./form.css";
 
 const Form = () => {
-  function handleSubmit(e) {
-    // Prevent the browser from reloading the page
-    e.preventDefault();
+  // function handleSubmit(e) {
+  //   // Prevent the browser from reloading the page
+  //   e.preventDefault();
 
-    // Read the form data
-    const form = e.target;
-    const formData = new FormData(form);
+  //   // Read the form data
+  //   const form = e.target;
+  //   const formData = new FormData(form);
 
-    // You can pass formData as a fetch body directly:
-    fetch("/some-api", { method: form.method, body: formData });
+  //   // You can pass formData as a fetch body directly:
+  //   fetch("/some-api", { method: form.method, body: formData });
 
-    // Or you can work with it as a plain object:
-    const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson);
-  }
+  //   // Or you can work with it as a plain object:
+  //   const formJson = Object.fromEntries(formData.entries());
+  //   console.log(formJson);
+  // }
 
   return (
     <form
       action="https://formsubmit.co/jiangli82@gmail.com"
       method="post"
-      onSubmit={handleSubmit}
+      // onSubmit={handleSubmit}
     >
       <label>
         <input
