@@ -19,7 +19,10 @@ const Form = () => {
   // }
 
   return (
-    <form action="https://formsubmit.co/jiangli82@gmail.com" method="POST">
+    <form
+      action="https://formsubmit.co/7e677490c0036eb1006c8adb42107fe2"
+      method="POST"
+    >
       {/* 
     // <form
     //   action="https://formsubmit.co/jiangli82@gmail.com"
@@ -29,7 +32,7 @@ const Form = () => {
       <label>
         <input
           className="inputName"
-          name="inputName"
+          name="Name"
           placeholder="Please write you name here"
         />
       </label>
@@ -37,7 +40,7 @@ const Form = () => {
       <label>
         <input
           className="inputEmail"
-          name="inputEmail"
+          name="Email"
           placeholder="And your Email address"
         />
       </label>
@@ -45,7 +48,7 @@ const Form = () => {
       <label>
         <input
           className="inputMobile"
-          name="inputMobile"
+          name="Mobile"
           placeholder="Your mobile number"
         />
       </label>
@@ -53,7 +56,7 @@ const Form = () => {
       <label>
         <textarea
           className="inputMessage"
-          name="inputMessage"
+          name="Message"
           placeholder="Your message"
         />
       </label>
