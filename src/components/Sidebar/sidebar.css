@@ -51,15 +51,17 @@
 }
 
 .linkSection {
-  display: block;
-  margin: 0 auto;
   text-align: center;
-  justify-content: center;
   padding-top: 200px;
 }
 
 .linkIcon {
-  padding: 10px;
+  margin: 5px;
+}
+
+.footerDiv {
+  padding-bottom: 0;
+  align-items: flex-end;
 }
 
 main {

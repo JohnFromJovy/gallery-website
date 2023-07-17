@@ -21,7 +21,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Sidebar>
-      <Footer />
     </div>
 
     //   <Nav />
