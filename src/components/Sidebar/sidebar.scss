@@ -1,68 +1,81 @@
-@import "../../styles/myColor";
-@import "../../styles/myFont";
+@import '../../styles/myColor';
+@import '../../styles/myFont';
 .sidebarContainer {
-  display: flex;
+	display: flex;
 }
 
 .sidebar {
-  background-color: $myGreen2;
-  color: $myFontColor1;
-  height: 100vh;
-  width: 250px;
-  transition: all 0.3s;
+	position: fixed;
+
+	background-color: $myGreen2;
+	color: $myFontColor1;
+	height: 100vh;
+	width: 250px;
+
+	overflow: auto;
+	transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+	width: 50px;
 }
 
 .topSection {
-  display: flex;
-  align-items: center;
-  padding: 20px 15px;
+	display: flex;
+	align-items: center;
+	padding: 20px 15px;
 }
 
 .logo {
-  text-align: left;
-  font-family: $myFont;
+	text-align: left;
+	font-family: $myFont;
 }
 
 .bars {
-  display: flex;
-  margin-top: 10px;
-  margin-left: 50px;
-  font-size: 25px;
+	display: flex;
+	margin-top: 10px;
+	margin-left: 50px;
+	font-size: 25px;
 }
 
 .link {
-  display: flex;
-  padding: 10px 15px;
-  gap: 15px;
-  transition: all 0.5s;
+	display: flex;
+	padding: 10px 15px;
+	gap: 15px;
+	transition: all 0.5s;
 }
 .link:hover {
-  background-color: $myBackgroundColor3;
-  color: $myFontColor3;
-  transition: all 0.5s;
+	background-color: $myBackgroundColor3;
+	color: $myFontColor3;
+	transition: all 0.5s;
 }
 
 .active {
-  background-color: $myGreen1;
+	background-color: $myGreen1;
 }
 
 .icon,
 .link {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .linkSection {
-  text-align: center;
-  padding-top: 200px;
+	text-align: center;
+	padding-top: 200px;
 }
 .linkIcon {
-  margin: 5px;
+	margin: 5px;
 }
 .footerDiv {
-  padding-bottom: 0;
-  align-items: flex-end;
+	padding-bottom: 0;
+	align-items: flex-end;
 }
 
 main {
-  width: 100%;
+	transition: margin-left 0.3s ease;
+	margin-left: 250px;
+}
+
+.sidebar.collapsed + main {
+	margin-left: 50px;
 }

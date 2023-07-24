@@ -3,11 +3,17 @@
 }
 
 .sidebar {
+  position: fixed;
   background-color: #11846d;
   color: #ecf0f1;
   height: 100vh;
   width: 250px;
-  transition: all 0.3s;
+  overflow: auto;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 50px;
 }
 
 .topSection {
@@ -65,5 +71,10 @@
 }
 
 main {
-  width: 100%;
+  transition: margin-left 0.3s ease;
+  margin-left: 250px;
+}
+
+.sidebar.collapsed + main {
+  margin-left: 50px;
 }/*# sourceMappingURL=sidebar.css.map */
