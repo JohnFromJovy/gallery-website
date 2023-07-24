@@ -1,16 +1,19 @@
 form {
-  margin-top: 2rem;
-}
-form label {
+  display: inline-block;
+  margin: auto;
+  padding: auto;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
   text-align: center;
 }
-form label input {
+form input {
   margin: auto;
   display: block;
   width: 25rem;
   color: #1a2a3a;
 }
-form label .inputMessage {
+form .inputMessage {
   display: block;
   margin: 0 auto;
   width: 25rem;
@@ -18,13 +21,13 @@ form label .inputMessage {
   height: 5rem;
   color: #1a2a3a;
 }
-form button {
+
+button {
   cursor: pointer;
   border: 0;
   border-radius: 2px;
   padding: 0.2rem;
-  display: block;
-  margin: 0 auto 2rem auto;
+  margin: 0 0 2rem auto;
   background-color: #16a085;
   color: #ecf0f1;
 }/*# sourceMappingURL=form.css.map */

@@ -1,6 +1,48 @@
-@import "../../../styles/myColor";
-@import "../../../styles/myFont";
+@import '../../../styles/myColor';
+@import '../../../styles/myFont';
 
 .about {
-  padding: 1rem;
+	background-color: $myBackgroundColor3;
+	padding: 1rem;
+}
+.title {
+	font-size: 5rem;
+	text-align: center;
+}
+
+h3 {
+	padding: 0.25rem;
+}
+
+.vertical-timeline-element-content {
+	box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+		0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+	padding: 2rem, 3rem !important;
+	p {
+		margin-top: 0 !important;
+	}
+}
+
+.vertical-timeline-element-subtitle {
+	margin-bottom: 0.5rem !important;
+}
+
+.date {
+	color: rgb(201, 251, 255);
+}
+// #description {
+// 	margin: 0, 0, 0, 0;
+// }
+p {
+	margin-top: 0;
+}
+.description {
+	margin-top: 0;
+}
+
+@media only screen and (max-width: 1700px) {
+	.vertical-timeline-element-date {
+		display: block;
+		float: none;
+	}
 }
