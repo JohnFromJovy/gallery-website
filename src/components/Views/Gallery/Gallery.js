@@ -56,7 +56,10 @@ function Gallery() {
 	return (
 		<>
 			{/* <Search setCurrentSearch={setCurrentSearch} /> */}
-			<Search onSearch={dataUpdate} />
+			<Search
+				title="searchBar"
+				onSearch={dataUpdate}
+			/>
 			<div className="gallery">
 				{data.map((d) => {
 					return <Picture data={d} />;
