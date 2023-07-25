@@ -16,30 +16,6 @@ function App() {
 
 	return (
 		<div className="App">
-			{/* <Sidebar>
-					<div className="content-wrapper">
-					<div
-						className="content"
-						style={{ transform: `translateY(-${currentPage * 100}%)` }}>
-						<div className="page">
-							<Homepage />
-		
-						</div>
-						<div className="page">
-							<About />
-	
-						</div>
-						<div>
-							<Gallery />
-
-						</div>
-						<div>
-							<Contact />
-
-						</div>
-					</div>
-				</div>
-					</Sidebar> */}
 			<Sidebar>
 				<Routes>
 					<Route
@@ -60,6 +36,7 @@ function App() {
 					/>
 				</Routes>
 			</Sidebar>
+
 			{/* <Routes>
 				<Route
 					index
@@ -77,8 +54,8 @@ function App() {
 					path="/contact"
 					element={<Contact />}
 				/>
-			</Routes>
-		</div> */}
+			</Routes> */}
+
 			{/* // <Nav />
 			//{' '}
 			<Routes>

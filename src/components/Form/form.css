@@ -1,21 +1,12 @@
-form {
-  display: inline-block;
-  margin: auto;
-  padding: auto;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  text-align: center;
-}
 form input {
-  margin: auto;
+  margin: 0.5rem auto;
   display: block;
   width: 25rem;
   color: #1a2a3a;
 }
 form .inputMessage {
   display: block;
-  margin: 0 auto;
+  margin: 0.5rem auto;
   width: 25rem;
   text-align: start;
   height: 5rem;

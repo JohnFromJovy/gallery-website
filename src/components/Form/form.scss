@@ -3,17 +3,20 @@
 
 form {
 	// margin-top: 2rem;
-	display: inline-block;
-	margin: auto;
-	padding: auto;
+	// display: inline-block;
+	// margin: auto;
+	// padding: auto;
 	// display: flex;
-	flex-direction: column;
-	gap: 10px;
-	align-items: center;
-	text-align: center;
+	// flex-direction: column;
+	// gap: 10px;
+	// align-items: center;
+	// text-align: center;
 
 	input {
-		margin: auto;
+		// margin-left: auto;
+		// margin-right: auto;
+		// margin-top: 1rem;
+		margin: 0.5rem auto;
 		display: block;
 		width: 25rem;
 		color: $myFontColor3;
@@ -21,7 +24,7 @@ form {
 
 	.inputMessage {
 		display: block;
-		margin: 0 auto;
+		margin: 0.5rem auto;
 		width: 25rem;
 		text-align: start;
 		height: 5rem;
